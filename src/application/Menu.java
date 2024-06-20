@@ -79,6 +79,7 @@ public class Menu {
 		            case 2:
 		                System.out.println("Qual é o tamanho do jogo em gygabytes");
 		                double tamanho = sc.nextDouble();
+		                sc.nextLine();
 		                jogos.CadastrarJogo(new JogoDigital(jogos.gerarId(), nome, tipo, preço, plataforma, tamanho));
 		                break;
 		            default:
@@ -120,24 +121,19 @@ public class Menu {
 					
 					System.out.println("Digite a Plataforma do Jogo: ");
 					plataforma = sc.nextLine();
-					
-					 		 
-				     System.out.println("O jogo é do tipo Físico ou Digital? (Digite 1 para Físico e 2 para Digital)");
-				     tipo = buscaJogo.getTipo();
 
-			        if (tipo == 1) {
+
+			        if (buscaJogo.getTipo() == 1) {
 			                System.out.println("Qual é o formato da mídia desse jogo?");
 			                String formato = sc.nextLine();
-			                jogos.atualizarJogo(new JogoFisico(id, nome, tipo, preço, plataforma, formato));
-			        } if (tipo == 2) {			            
+			                jogos.atualizarJogo(new JogoFisico(id, nome, 1, preço, plataforma, formato));
+			        }else {			            
 			                System.out.println("Qual é o tamanho do jogo em gygabytes");
-			                double tamanho = sc.nextDouble();
-			                jogos.CadastrarJogo(new JogoDigital(id, nome, tipo, preço, plataforma, tamanho));
-			        } else {
-			        	System.out.println("Tipo de jogo inválido.");
-			        }
+			                double tamanho = sc.nextDouble();			                
+			                jogos.CadastrarJogo(new JogoDigital(id, nome, 2, preço, plataforma, tamanho));
+			        } 
 			        }					
-
+				break;
 			case 5:
 				System.out.println(Cores.TEXT_YELLOW_BRIGHT +"Remover jogo do estoque:");
 				System.out.println("------------------------------------");
