@@ -27,18 +27,52 @@ public class JogoController implements JogoRepository {
 
 	@Override
 	public void atualizarJogo(Jogo jogo) {
-		// TODO Auto-generated method stub
+		var buscaJogo = buscarPorId(jogo.getId());
+		if (buscaJogo != null) {
+			listaJogos.set(listaJogos.indexOf(buscaJogo), jogo);
+			System.out.println("O jogo com Id " + jogo.getId() + " foi atualizado com sucesso!");
+		}else {
+			System.out.println("O jogo com Id " + jogo.getId() + " não foi encontrado!");
+		}
 		
+	}
+	
+	public void procurarPorId(Integer id) {
+		var jogo = buscarPorId(id);
+		
+		if(jogo != null) {
+			jogo.visualizar();
+			
+		}else {
+			System.out.println("Jogo Id: " + id + " não foi encontrado!");
+		}
 	}
 
 	@Override
 	public void deletar(Integer id) {
-		// TODO Auto-generated method stub
+		var jogo = buscarPorId(id);
 		
+		if (jogo != null) {
+			if (listaJogos.remove(jogo) == true) {
+				System.out.println("O jogo " + jogo.getnome() + " foi deletado com sucesso!");
+			}else {
+				System.out.println("O jogo Não foi encontrado!");
+			}
+		}
+
 	}
 	
 	public int gerarId() {
 		return ++ id;
+	}
+	
+	public Jogo buscarPorId(int id) {
+		for (var jogo : listaJogos) {
+			if (jogo.getId() == id) {
+				return jogo;
+			}
+		}
+		return null;
 	}
 
 }

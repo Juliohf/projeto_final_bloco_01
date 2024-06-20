@@ -19,6 +19,15 @@ public abstract class Jogo {
 		this.plataforma = plataforma;
 	}
 	
+	
+	public Integer getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(Integer tipo) {
+		this.tipo = tipo;
+	}
+
 	public Integer getId() {
 		return id;
 	}
@@ -69,6 +78,7 @@ public abstract class Jogo {
 		System.out.println("*********************************************************************");
 		System.out.println("ID " + this.id);
 		System.out.println("Nome " + this.nome);
+		System.out.println("Tipo " + this.tipo);
 		System.out.println("Preço " + this.preço);
 		System.out.println("Plataforma " + this.plataforma);
 

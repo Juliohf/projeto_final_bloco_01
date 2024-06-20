@@ -8,6 +8,7 @@ public interface JogoRepository {
 	public void CadastrarJogo(Jogo jogo);
 	public void atualizarJogo(Jogo jogo);
 	public void deletar(Integer id);
+	public void procurarPorId(Integer id);
 	
 
 }
