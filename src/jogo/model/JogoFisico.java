@@ -7,8 +7,8 @@ public class JogoFisico extends Jogo {
 		public JogoFisico() {
 		super();
 	}
-	public JogoFisico(String name, Double preço, String plataforma, String formato) {
-		super(name, preço, plataforma);
+	public JogoFisico(Integer id, String nome, Double preço, String plataforma, String formato) {
+		super(nome, preço, plataforma);
 		this.formato = formato;
 	}
 	

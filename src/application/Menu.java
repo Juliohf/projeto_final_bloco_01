@@ -34,7 +34,7 @@ public class Menu {
 			
 			int opcao = sc.nextInt();
 			
-			if (opcao == 6) {
+			if (opcao == 5) {
 				System.out.println("Até logo!");
 				System.exit(0);
 				sc.close();
