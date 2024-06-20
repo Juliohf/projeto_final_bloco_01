@@ -22,12 +22,11 @@ public class Menu {
 			System.out.println("                                                     ");
 			System.out.println("*****************************************************");
 			System.out.println("                                                     ");
-			System.out.println("            1 - Visualizar jogos disponiveis         ");
-			System.out.println("            2 - Adicionar jogo ao carrinho           ");
-			System.out.println("            3 - Visualizar carrinho 				 ");
-			System.out.println("            4 - Remover jogo do carrinho             ");
-			System.out.println("            5 - Finalizar compra                     ");
-			System.out.println("            6 - Sair da loja                         ");
+			System.out.println("            1 - Adicionar novo jogo ao estoque       ");
+			System.out.println("            2 - Visualizar estoque			         ");
+			System.out.println("            3 - Editar jogo do estoque 				 ");
+			System.out.println("            4 - Remover jogo do estoque            	 ");
+			System.out.println("            5 - Sair                        		 ");
 			System.out.println("                                                     ");
 			System.out.println("*****************************************************");
 			System.out.println("Entre com a opção desejada:                          ");
@@ -44,23 +43,20 @@ public class Menu {
 			switch(opcao) {
 			
 			case 1:
-				System.out.println(Cores.TEXT_YELLOW_BRIGHT +"Visualizar jogos");
+				System.out.println(Cores.TEXT_YELLOW_BRIGHT +"Adicionar novo jogo");
 				break;
 			case 2:
-				System.out.println(Cores.TEXT_YELLOW_BRIGHT +"Adicionar jogo");
+				System.out.println(Cores.TEXT_YELLOW_BRIGHT +"Visualizar estoque");
 				break;
 			case 3:
-				System.out.println(Cores.TEXT_YELLOW_BRIGHT +"Visualizar carrinho");
+				System.out.println(Cores.TEXT_YELLOW_BRIGHT +"Editar jogo do estoque");
 				break;
 			case 4:
-				System.out.println(Cores.TEXT_YELLOW_BRIGHT +"Remover jogo do carrinho");
+				System.out.println(Cores.TEXT_YELLOW_BRIGHT +"Remover jogo do estoque");
 				break;
 			case 5:
-				System.out.println(Cores.TEXT_YELLOW_BRIGHT +"Finalizar compra");
-				break;
-			case 6:
 				System.out.println(Cores.TEXT_YELLOW_BRIGHT +"Sair");
-				break;	
+				break;
 			default:
 				System.out.println(Cores.TEXT_YELLOW_BRIGHT +"Opção invalida!");
 				break;
