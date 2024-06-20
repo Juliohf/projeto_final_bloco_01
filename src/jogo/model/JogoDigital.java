@@ -8,8 +8,8 @@ public class JogoDigital extends Jogo {
 		super();
 	}
 	
-	public JogoDigital(String name, Double preço, String plataforma, double tamanho) {
-		super(name, preço, plataforma);
+	public JogoDigital(Integer id,String nome,Integer tipo, Double preço, String plataforma, double tamanho) {
+		super(id, nome, tipo, preço, plataforma);
 		this.tamanho = tamanho;
 	}
 
